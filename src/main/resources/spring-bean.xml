@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 需要交给IoC容器管理的类 -->
+    <bean id="classInfo" class="com.yc.spring.bean.ClassInfo">
+        <property name="cid" value="101"></property>
+        <property name="cname"  value="源辰C122班"></property>
+        <property name="year" value="2022"></property>
+    </bean>
+
+    <bean id="stuInfo" class="com.yc.spring.bean.StuInfo">
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="源辰"></property>
+        <property name="age" value="18"></property>
+        <property name="tel" value="150123456789"></property>
+        <property name="sex" value="男"></property>
+        <property name="cf" ref="classInfo"></property>
+    </bean>
+
+</beans>
+
